@@ -1,25 +1,25 @@
 # Resumo do Projeto #
 
-Helper para preenchimento de uma p·gina HTML especÌfica. Este Helper ser· chamado "Assistente Time Sheet".
+Helper para preenchimento de uma p√°gina HTML espec√≠fica. Este Helper ser√° chamado "Assistente Time Sheet".
 
 
-# Cen·rio atual #
+# Cen√°rio atual #
 
-Atualmente temos uma rotina de trabalho onde informamos alguns dados referentes ‡ nossa rotina de trabalho.
+Atualmente temos uma rotina de trabalho onde informamos alguns dados referentes √† nossa rotina de trabalho.
 
-S„o eles:
+S√£o eles:
  - Data
- - DuraÁ„o
- - ClassificaÁ„o
+ - Dura√ß√£o
+ - Classifica√ß√£o
  - Tipo
- - Origem (dependento da opÁ„o escolhida, mais um dos campos abaixo devem ser preenchidos, para maiores detalhes ler a sess„o 'Insumos' abaixo)
-   - N˙mero de CAC
-   - N˙mero de GMUD
-   - N˙mero de SU
+ - Origem (dependento da op√ß√£o escolhida, mais um dos campos abaixo devem ser preenchidos, para maiores detalhes ler a sess√£o 'Insumos' abaixo)
+   - N√∫mero de CAC
+   - N√∫mero de GMUD
+   - N√∫mero de SU
    - Representante
- - DescriÁ„o do Apontamento
+ - Descri√ß√£o do Apontamento
 
-… um processo repetitivo que toma muito tempo do usu·rio. Este tempo pode ser otimizado pois muitas vezes os valores informados s„o os mesmos e podemos preencher a tela se tivermos um assistente que pegam templates prÈ-cadastrados e j· preencham os campos
+√â um processo repetitivo que toma muito tempo do usu√°rio. Este tempo pode ser otimizado pois muitas vezes os valores informados s√£o os mesmos e podemos preencher a tela se tivermos um assistente que pegam templates pr√©-cadastrados e j√° preencham os campos
 
 # Entes envolvidos #
 
@@ -30,71 +30,71 @@ S„o eles:
 
 # Objetivo do Projeto #
 
-1) Criar uma extens„o a ser instalada no Microsoft Edge.
+1) Criar uma extens√£o a ser instalada no Microsoft Edge.
 
-2) Se possÌvel, fazer de um modo que esta extens„o seja flexÌvel e possa ser instalada no Google e no Mozilla Firefox
+2) Se poss√≠vel, fazer de um modo que esta extens√£o seja flex√≠vel e possa ser instalada no Google e no Mozilla Firefox
 
-3) Sempre que aberta a p·gina descrita abaixo em "RestriÁıes", que ser· chamada sempre por "tela de apontamento" deve-se injetar na p·gina um pequeno popover flutuante.
+3) Sempre que aberta a p√°gina descrita abaixo em "Restri√ß√µes", que ser√° chamada sempre por "tela de apontamento" deve-se injetar na p√°gina um pequeno popover flutuante.
 
-4) A funÁ„o deste popover È, ao ser clicado, abrir o tela principal da nossa extens„o, e vou sempre referenci·-lo por "popover" para facilitar
+4) A fun√ß√£o deste popover √©, ao ser clicado, abrir o tela principal da nossa extens√£o, e vou sempre referenci√°-lo por "popover" para facilitar
 
 5) O popover deve ser dragabble 
 
-6) A posiÁ„o do popover deve ser salva localmente para que na prÛxima vez que a tela de apontamento for aberta trazer o popover aberto em sua ˙ltima posiÁ„o
+6) A posi√ß√£o do popover deve ser salva localmente para que na pr√≥xima vez que a tela de apontamento for aberta trazer o popover aberto em sua √∫ltima posi√ß√£o
 
-7) Caso n„o exista salva a posiÁ„o do popover, utilizar o default, canto superior direito da p·gina.
+7) Caso n√£o exista salva a posi√ß√£o do popover, utilizar o default, canto superior direito da p√°gina.
 
-8) O popover deve manter sua posiÁ„o fixa na tela em caso de rolagem da mesma (tanto horizontal quanto vertical)
+8) O popover deve manter sua posi√ß√£o fixa na tela em caso de rolagem da mesma (tanto horizontal quanto vertical)
 
 9) O popover deve ter 30px x 30px
 
 10) O popover deve projetar uma sobra discreta em seu canto inferior direito
 
-11) Deve ter sÛ "emoji de varinha m·gica", ao passar o mouse acima exibir um title "Assistente Time Sheet"
+11) Deve ter s√≥ "emoji de varinha m√°gica", ao passar o mouse acima exibir um title "Assistente Time Sheet"
 
 12) Ao ser clicado deve abrir a tela principal do assistente, vou chamar de "tela principal"
 
-13) colocar uma animaÁ„o de abertura no estilo "esticando"
+13) colocar uma anima√ß√£o de abertura no estilo "esticando"
 
-14) A "tela principal" ser· composta por cabeÁalho, corpo e rodapÈ.
+14) A "tela principal" ser√° composta por cabe√ßalho, corpo e rodap√©.
 
-15) O cabeÁalho da tela principal deve um tÌtulo centralizado e um "x" (fechar) no canto direito
+15) O cabe√ßalho da tela principal deve um t√≠tulo centralizado e um "x" (fechar) no canto direito
 
-16) O tÌtulo deve ter o mesmo emoji do popover mais o "Assistente Time Sheet"
+16) O t√≠tulo deve ter o mesmo emoji do popover mais o "Assistente Time Sheet"
 
-17) ao clicar no x a "tela principal" deve ser fechada usando uma animaÁ„o "encolhendo" na direÁ„o de onde est· o popover, justamente para parecer que o popover cresce e vira a "tela principal" e a "tela principal" encolhe e vira o "popover"
+17) ao clicar no x a "tela principal" deve ser fechada usando uma anima√ß√£o "encolhendo" na dire√ß√£o de onde est√° o popover, justamente para parecer que o popover cresce e vira a "tela principal" e a "tela principal" encolhe e vira o "popover"
 
-18) O corpo da tela principal deve ter uma lista com os "templates" cadastrados e mais 3 Ìcones: "Utilizar", "Favoritar", "Editar" e "Excluir"
+18) O corpo da tela principal deve ter uma lista com os "templates" cadastrados e mais 3 √≠cones: "Utilizar", "Favoritar", "Editar" e "Excluir"
 
-19) O corpo deve rolar por baixo do cabeÁalho e por baixo do rodapÈ caso tenha itens o suficiente para gerar um corpo t„o grande que gere uma barra de rolagem
+19) O corpo deve rolar por baixo do cabe√ßalho e por baixo do rodap√© caso tenha itens o suficiente para gerar um corpo t√£o grande que gere uma barra de rolagem
 
-20) Caso n„o exista nenhum template cadastrado, apresentar a mensagem "Nenhum template cadastrado. O que vocÍ est· esperando para comeÁar a economizar seu tempo? [emoji de foguete]"
+20) Caso n√£o exista nenhum template cadastrado, apresentar a mensagem "Nenhum template cadastrado. O que voc√™ est√° esperando para come√ßar a economizar seu tempo? [emoji de foguete]"
 
-21) Deve ser ordenada por "favoritos = true" e Data/hora de ˙ltima utilizaÁ„o
+21) Deve ser ordenada por "favoritos = true" e Data/hora de √∫ltima utiliza√ß√£o
 
-22) Ao clicar em "Utilizar" deve preencher os campos da "tela de apontamento", salvar a data/hora de ˙ltima utilizaÁ„o e fechar a "tela principal", com o mesmo efeito de ter clicado no x do cabeÁalho
+22) Ao clicar em "Utilizar" deve preencher os campos da "tela de apontamento", salvar a data/hora de √∫ltima utiliza√ß√£o e fechar a "tela principal", com o mesmo efeito de ter clicado no x do cabe√ßalho
 
-23) Ao clicar em "Favoritar" (Ìcone de coraÁ„o acesso ou apagado, refletindo o true/false) devemos disparar um toggle, marcando favorito como true ou false (invertendo a sua condiÁ„o atual) e atualizar a tela de modo que os templates cadastrados se reordenem 
+23) Ao clicar em "Favoritar" (√≠cone de cora√ß√£o acesso ou apagado, refletindo o true/false) devemos disparar um toggle, marcando favorito como true ou false (invertendo a sua condi√ß√£o atual) e atualizar a tela de modo que os templates cadastrados se reordenem 
 
-24) Ao clicar em "Editar" deve abrir um modal "tela de ediÁ„o" com os campos do template e permitir que o usu·rio altere os campos ClassificaÁ„o, Tipo, Origem, N˙mero de CAC ou N˙mero de GMUD ou N˙mero de SU ou Representante (dependento da opÁ„o escolhida, para maiores detalhes ler a sess„o 'Insumos' abaixo) e DescriÁ„o do Apontamento
+24) Ao clicar em "Editar" deve abrir um modal "tela de edi√ß√£o" com os campos do template e permitir que o usu√°rio altere os campos Classifica√ß√£o, Tipo, Origem, N√∫mero de CAC ou N√∫mero de GMUD ou N√∫mero de SU ou Representante (dependento da op√ß√£o escolhida, para maiores detalhes ler a sess√£o 'Insumos' abaixo) e Descri√ß√£o do Apontamento
 
 25) Ao clicar em "Excluir" deve excluir de vez o template
 
-25) o rodapÈ deve ser uma barra horizaontal estreita e transparente fixada na parte inferior
+25) o rodap√© deve ser uma barra horizaontal estreita e transparente fixada na parte inferior
 
-26) deve ter somente um emoji aleatÛrio que muda a cada vez que a "tela principal" for aberta
+26) deve ter somente um emoji aleat√≥rio que muda a cada vez que a "tela principal" for aberta
 
-27) o title deste emoji deve ser: "Desenvolvido com muito carinho por alguÈm que estava pensando em vocÍ [emoji wink]"
+27) o title deste emoji deve ser: "Desenvolvido com muito carinho por algu√©m que estava pensando em voc√™ [emoji wink]"
 
-28) A "tela principal" deve tentar ao m·ximo possÌvel usar os mesmos estilos CSS da "tela de apontamento", para dar uma impress„o de realmente fazer parte da p·gina
+28) A "tela principal" deve tentar ao m√°ximo poss√≠vel usar os mesmos estilos CSS da "tela de apontamento", para dar uma impress√£o de realmente fazer parte da p√°gina
 
-29) Sempre que o usu·rio inclui um novo apontamento na "tela de apontamento", clicando no bot„o "Salvar Apontamento" criar um template novo desde que o apontamento atual n„o tenha sido fruto de um clique no Ìcone "Utilizar" da "tela principal" e que j· n„o haja algum template cadastrado com as mesmas caracterÌsticas
+29) Sempre que o usu√°rio inclui um novo apontamento na "tela de apontamento", clicando no bot√£o "Salvar Apontamento" criar um template novo desde que o apontamento atual n√£o tenha sido fruto de um clique no √≠cone "Utilizar" da "tela principal" e que j√° n√£o haja algum template cadastrado com as mesmas caracter√≠sticas
 
 
 
-# RestriÁıes #
+# Restri√ß√µes #
 
-1) A extens„o deve ser ativada somente se a p·gina navegada estiver dentro dos domÌnios:
+1) A extens√£o deve ser ativada somente se a p√°gina navegada estiver dentro dos dom√≠nios:
 
 - www.intergrall.com.br
 - wwws.intergrall.com.br
@@ -102,24 +102,24 @@ S„o eles:
 - dev.intergrall.com.br
 - linux07
 
-2) AlÈm do domÌnio deve ser ativada somente se o caminho sendo executado for "callcenter/apontamento_atividade_2.php"
+2) Al√©m do dom√≠nio deve ser ativada somente se o caminho sendo executado for "callcenter/apontamento_atividade_2.php"
 
-3) AlÈm das condiÁıes acima, deve ser ativada quando a div com a classe modal--wrapper estiver visÌvel
+3) Al√©m das condi√ß√µes acima, deve ser ativada quando a div com a classe modal--wrapper estiver vis√≠vel
 
 
 # Insumos #
 
-1) CÛdigo fonte [./example_page.html]
-  Arquivo contendo um modelo do HTML que devemos monitorar, extrair os dados (para salvar em uma memÛria local) e oferecer sugest„o de preenchimento
+1) C√≥digo fonte [./example_page.html]
+  Arquivo contendo um modelo do HTML que devemos monitorar, extrair os dados (para salvar em uma mem√≥ria local) e oferecer sugest√£o de preenchimento
 
 2) Imagem [./pagina_renderizada_origem_cac.png]
-  P·gina renderizada quando a origem selecionada È CAC, solicitando ao usu·rio que digite um n˙mero de CAC
+  P√°gina renderizada quando a origem selecionada √© CAC, solicitando ao usu√°rio que digite um n√∫mero de CAC
 
 3) Imagem [./pagina_renderizada_origem_gmud.png]
-  P·gina renderizada quando a origem selecionada È GMUD, solicitando ao usu·rio que digite um n˙mero de GMUD
+  P√°gina renderizada quando a origem selecionada √© GMUD, solicitando ao usu√°rio que digite um n√∫mero de GMUD
 
 4) Imagem [./pagina_renderizada_origem_outro.png]
-  P·gina renderizada quando a origem selecionada È Outro, solicitando ao usu·rio escolher no combo um representante
+  P√°gina renderizada quando a origem selecionada √© Outro, solicitando ao usu√°rio escolher no combo um representante
 
 5) Imagem [./pagina_renderizada_origem_su.png]
-  P·gina renderizada quando a origem selecionada È SU, solicitando ao usu·rio um n˙mero de SU
+  P√°gina renderizada quando a origem selecionada √© SU, solicitando ao usu√°rio um n√∫mero de SU
