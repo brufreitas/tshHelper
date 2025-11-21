@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Assistente Time Sheet",
+  "description": "Helper para preencher a tela de apontamento e gerir templates.",
+  "version": "0.1.3",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.intergrall.com.br/callcenter/apontamento_atividade_2.php*",
+        "*://wwws.intergrall.com.br/callcenter/apontamento_atividade_2.php*",
+        "*://www2.uranet.com.br/callcenter/apontamento_atividade_2.php*",
+        "*://dev.intergrall.com.br/callcenter/apontamento_atividade_2.php*",
+        "*://linux07/callcenter/apontamento_atividade_2.php*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "128": "icons/icon128.png"
+  }
+}

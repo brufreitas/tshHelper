@@ -1,0 +1,327 @@
+.ats-root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2147483000;
+  font-family: inherit;
+}
+
+.ats-popover {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 16px;
+  right: 16px;
+  background: #f8fafc;
+  color: #1f2937;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px !important;
+  /* cursor: move; */
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.18);
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.ats-popover:hover {
+  background: #ffffff;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.18);
+}
+
+.ats-popover:active {
+  transform: scale(0.98);
+}
+
+.ats-panel {
+  position: fixed;
+  width: min(420px, 95vw);
+  max-height: 80vh;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 10px 12px 28px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  pointer-events: auto;
+  transform-origin: top right;
+}
+
+.ats-panel.open {
+  display: flex;
+  animation: ats-expand 160ms ease-out;
+}
+
+.ats-panel.closing {
+  animation: ats-collapse 140ms ease-in forwards;
+}
+
+@keyframes ats-expand {
+  from {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ats-collapse {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+}
+
+.ats-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  background: linear-gradient(90deg, #f7f9fc, #eef2f7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  color: #2c3b5b;
+  position: relative;
+  cursor: grab;
+}
+
+.ats-panel header.ats-dragging {
+  cursor: grabbing;
+}
+
+.ats-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: #4c5870;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.ats-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.04);
+}
+
+.ats-body {
+  position: relative;
+  padding: 10px 12px 12px;
+  overflow-y: auto;
+  flex: 1;
+  background: #fff;
+}
+
+.ats-empty {
+  padding: 24px 12px;
+  color: #4c5870;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.ats-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ats-card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  padding: 10px 10px 8px;
+  background: #fdfefe;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ats-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.ats-card-title {
+  font-weight: 600;
+  color: #2c3b5b;
+  font-size: 14px;
+}
+
+.ats-card-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 10px;
+  font-size: 12px;
+  color: #4c5870;
+}
+
+.ats-card-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.ats-btn {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #f5f7fa;
+  border-radius: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 120ms ease, transform 120ms ease, border-color 120ms ease;
+}
+
+.ats-btn:hover {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.ats-btn.primary {
+  background: #4c5870;
+  color: #fff;
+  border-color: #4c5870;
+}
+
+.ats-btn.primary:hover {
+  background: #3f4a63;
+  border-color: #3f4a63;
+}
+
+.ats-fav {
+  color: #d97706;
+}
+
+.ats-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.015);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+  min-height: 32px;
+}
+
+.ats-footer button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: default;
+  padding: 0;
+}
+
+.ats-badge {
+  display: inline-block;
+  background: #eef2f7;
+  color: #2c3b5b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.ats-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 2147483001;
+  pointer-events: auto;
+}
+
+.ats-modal {
+  width: min(480px, 98vw);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.ats-modal header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: linear-gradient(90deg, #f7f9fc, #eef2f7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-weight: 600;
+  color: #2c3b5b;
+}
+
+.ats-modal body,
+.ats-modal .ats-modal-body {
+  padding: 12px 14px 16px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.ats-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.ats-form-row label {
+  font-size: 12px;
+  color: #2c3b5b;
+  font-weight: 600;
+}
+
+.ats-form-row select,
+.ats-form-row input,
+.ats-form-row textarea {
+  width: 100%;
+  padding: 7px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 13px;
+  background: #fff;
+  color: #1f2937;
+}
+
+.ats-form-row textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.ats-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 10px 14px 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.015);
+}
