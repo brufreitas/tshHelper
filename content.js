@@ -17,8 +17,8 @@
     templates: 'atsTemplates',
     popover: 'atsPopoverPosition'
   };
-  const randomEmojis = ['🚀', '🌟', '✨', '🤖', '🎯', '🧭', '💡', '🔥', '📌'];
-  const magicEmoji = '🪄';
+  const randomEmojis = ['🚀', '🌟', '✨', '🤖', '', '🧭', '💡', '🔥', '📌', '😜', '😝', '👾', '🐵', '🦄', '👀', '🧠', '👩‍💻', '👨‍💻', '👩‍🚀', '👨‍🚀', '💪', '🤘', '🎈', '🧪', '⚙', '💾', '💡', '☀'];
+  const appIconEmoji = '🎯';
   const DEBUG_FORCE_ACTIVATE = true; // TEMP: força ativação mesmo se modal não estiver visível
 
   const log = (...args) => {
@@ -151,7 +151,7 @@
     const pop = document.createElement('button');
     pop.className = 'ats-popover';
     pop.title = 'Assistente Time Sheet';
-    pop.textContent = magicEmoji;
+    pop.textContent = appIconEmoji;
     let startX = 0;
     let startY = 0;
     let startTop = 0;
@@ -229,7 +229,7 @@
     panel.style.right = '16px';
 
     const header = document.createElement('header');
-    header.textContent = `${magicEmoji} Assistente Time Sheet`;
+    header.textContent = `${appIconEmoji} Assistente Time Sheet`;
     const closeBtn = document.createElement('button');
     closeBtn.className = 'ats-close';
     closeBtn.setAttribute('aria-label', 'Fechar');
@@ -246,7 +246,7 @@
     const footer = document.createElement('div');
     footer.className = 'ats-footer';
     const emojiBtn = document.createElement('button');
-    emojiBtn.title = 'Desenvolvido com muito carinho por alguém que estava pensando em você 😉';
+    emojiBtn.title = 'Feito com muito karinho pra ajudar a nossa Komunidade Dev';
     emojiBtn.textContent = randomEmojis[Math.floor(Math.random() * randomEmojis.length)];
     footer.appendChild(emojiBtn);
     state.footerEmojiBtn = emojiBtn;

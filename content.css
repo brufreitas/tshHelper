@@ -102,18 +102,19 @@
 .ats-close {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 5px;
   border: none;
   background: transparent;
-  font-size: 16px;
+  font-size: 16px !important;
   cursor: pointer;
   color: #4c5870;
   width: 28px;
   height: 28px;
-  border-radius: 6px;
+  border-radius: 6px !important;
   display: inline-flex;
-  align-items: center;
+  align-items: center !important;
   justify-content: center;
+  margin: 0;
   transition: background 120ms ease, transform 120ms ease;
 }
 
@@ -220,7 +221,7 @@
 
 .ats-footer {
   border-top: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 8px 12px;
+  padding: 2px 12px;
   background: rgba(0, 0, 0, 0.015);
   display: flex;
   justify-content: flex-start;
@@ -234,7 +235,8 @@
   border: none;
   font-size: 18px;
   cursor: default;
-  padding: 0;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .ats-badge {
